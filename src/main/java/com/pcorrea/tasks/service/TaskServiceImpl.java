@@ -1,4 +1,4 @@
 package com.pcorrea.tasks.service;
 
-public class TaskServiceImpl {
+public class TaskServiceImpl implements TaskService{
 }
