@@ -13,9 +13,9 @@ import { TasksListComponent } from './tasks/tasks-list/tasks-list.component';
     TasksAddComponent,
     TasksListComponent
   ],
-  imports: [
-    BrowserModule
-  ],
+    imports: [
+        BrowserModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
