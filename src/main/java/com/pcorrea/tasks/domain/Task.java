@@ -22,6 +22,10 @@ public class Task {
     private LocalDate dueDate;
     private boolean completed;
 
+//
+//    public Task(long l, String create_spring_boot_application, LocalDate now, boolean b) {
+//    }
 
-
+    public Task() {
+    }
 }

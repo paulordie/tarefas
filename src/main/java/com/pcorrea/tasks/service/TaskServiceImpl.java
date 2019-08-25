@@ -2,7 +2,10 @@ package com.pcorrea.tasks.service;
 
 import com.pcorrea.tasks.domain.Task;
 import com.pcorrea.tasks.repository.TaskRepository;
+import org.springframework.stereotype.Service;
 
+
+@Service
 public class TaskServiceImpl implements TaskService{
 
     private TaskRepository taskRepository;

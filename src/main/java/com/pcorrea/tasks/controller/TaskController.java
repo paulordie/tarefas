@@ -22,7 +22,7 @@ public class TaskController {
     }
 
     @PostMapping("/save")
-    public Task saveTask(@RequestBody Task task){
+    public Task saveTask(@RequestBody Task task){ // save angular to spring
         return this.taskService.save(task);
     }
 
