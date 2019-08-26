@@ -9,7 +9,7 @@ import {Task} from "./task.model";
 @Injectable()
 export class TaskService {
 
-    taskUrl = 'http://localhost:8080/api/tasks';
+    taskUrl = '/api/tasks/';
 
     constructor(private http: HttpClient){
 

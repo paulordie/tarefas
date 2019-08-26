@@ -5,6 +5,7 @@ import {TaskService} from "../task.service";
 @Component({
   selector: 'app-tasks-list',
   templateUrl: './tasks-list.component.html',
+  providers: [TaskService],
   styleUrls: ['./tasks-list.component.css']
 })
 export class TasksListComponent implements OnInit {
@@ -21,7 +22,7 @@ export class TasksListComponent implements OnInit {
       return this.taskService.getTasks()
           .subscribe(
               (tasks: any[]) => {
-                  this.tasks = tasks
+                  (this.tasks = tasks)
               },
               (error) => console.log(error)
           );
