@@ -10,6 +10,7 @@ import {Task} from "./task.model";
 export class TaskService {
 
     taskUrl = '/api/tasks/';
+    posttaskUrl = '/api/tasks/save/';
 
     constructor(private http: HttpClient){
 
@@ -17,6 +18,10 @@ export class TaskService {
 
     getTasks(): Observable<Task[]>{
         // return this.http.get('/api/tasks').map(response => response.json());
-        return this.http.get<Task[]>(this.taskUrl).pipe(map((response: any) => response.json()));
+        return this.http.get<Task[]>(this.taskUrl).pipe(map(response => response));
+    }
+    saveTask(task: Task, _checked: boolean){
+        task.completed = _checked;
+        return this.http.post<Task>(this.posttaskUrl, task).pipe(map(response => response));
     }
 }
