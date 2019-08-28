@@ -19,13 +19,16 @@ export class TasksListComponent implements OnInit {
       // this.tasks.push( new Task(2,"Task 2", false, "25/08/2019"));
       // this.tasks.push( new Task(3,"Task 3", false, "25/08/2019"));
 
-      return this.taskService.getTasks()
+      this.taskService.getTasks()
           .subscribe(
               (tasks: any[]) => {
                   (this.tasks = tasks)
               },
               (error) => console.log(error)
           );
+      this.taskService.onTaskAdded.subscribe(
+          (task: Task) => this.tasks.push()
+      );
   }
 
   getDueDateLabel(task: Task){
